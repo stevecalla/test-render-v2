@@ -69,7 +69,5 @@ eventArray.push(eventPeriod);
 export { startDateArray, endDateArray, eventArray };
 
 
-
-
 console.log({ startDateArray, endDateArray, eventArray });
 console.log(eventArray[0],eventArray[1]);
