@@ -15,7 +15,7 @@
     "client:dev": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "seed": "cd server && npm run seed",
-    "render-build": "npm install && npm run build",
+    "render-build": "npm install && npm run build && npm run serveer",
     "client:render": "cd client && npm run render:build",
     "start-render": "npm run client:render && cd server && npm run render:start"
   },
