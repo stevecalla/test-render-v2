@@ -1,15 +1,15 @@
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './index.css';
 
 import App from './App.tsx';
-import ErrorPage from './pages/ErrorPage.tsx';
-import MainPage from './pages/MainPage.tsx';
-import VolunteerPage from './pages/VolunteerPage.tsx';
-import VolunteerForm from './pages/VolunteerForm.tsx';
-import EditVolunteer from './pages/EditVolunteer.tsx';
-import EditWork from './pages/EditWork.tsx';
-
+import AppointmentAvailability from './pages/appointmentAvailability.tsx';
+import ErrorPage from './pages/errorPage.tsx';
+import PersonalInformation from './pages/personalInformation.tsx';
+import Login from './pages/Login.tsx';
+import PropertyDetails from './pages/propertyDetails.tsx';
+import ServiceSelection from './pages/serviceSelection.tsx';
+import Summary from './pages/summary.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,31 +19,37 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <MainPage />
+        element: <ServiceSelection />,
       }, 
       {
-        path: '/show-volunteers',
-        element: <VolunteerPage />
+        path: '/ServiceSelection',
+        element: <ServiceSelection />,
+      }, 
+      {
+        path: '/PropertyDetails',
+        element: <PropertyDetails />,
+      }, 
+      {
+        path: '/AppointmentAvailability',
+        element: <AppointmentAvailability />,
+      }, 
+      {
+        path: '/login',
+        element: <Login />,
       },
       {
-        path: '/new-volunteer',
-        element: <VolunteerForm />
-      },
+        path: '/PersonalInformation',
+        element: <PersonalInformation />,
+      }, 
       {
-        path: '/edit-volunteer',
-        element: <EditVolunteer />
-      },
-      {
-        path: '/edit-work',
-        element: <EditWork />
-      }
-    ]
-  }
+        path: '/Summary',
+        element: <Summary />,
+      }, 
+    ],
+  },
 ]);
 
 const rootElement = document.getElementById('root');
-if(rootElement) {
-  ReactDOM.createRoot(rootElement).render(
-    <RouterProvider router={router} />
-  );
-}
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />);
+};
