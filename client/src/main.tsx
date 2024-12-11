@@ -4,7 +4,7 @@ import './index.css';
 
 import App from './App.tsx';
 import AppointmentAvailability from './pages/appointmentAvailability.tsx';
-import ErrorPage from './pages/errorPage.tsx';
+import ErrorPage from './pages/ErrorPage.tsx';
 import PersonalInformation from './pages/personalInformation.tsx';
 import Login from './pages/Login.tsx';
 import PropertyDetails from './pages/propertyDetails.tsx';
